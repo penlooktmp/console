@@ -3,7 +3,7 @@
 Command-line
 
 ```bash
-penlook clone update build test deploy backup 
+penlook clone update build test deploy backup
 ```
 
 + clone  : Initialize project
