@@ -1,8 +1,6 @@
 # Penlook Console
-============================
 
-
-### Command-line
+Command-line
 
 ```bash
 penlook clone update build test deploy backup 
