@@ -1,9 +1,6 @@
 # Penlook Console
+==========================
 
-### CLI
-
-penlook clone
-penlook test
-penlook build
-penlook update
-penlook deploy
+```bash
+penlook clone update build test deploy
+```
