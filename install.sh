@@ -13,6 +13,7 @@ include() {
 	echo $'\n'  >> $main
 }
 
+include "auth"
 include "util"
 include "modules/build"
 include "modules/test"

@@ -12,7 +12,7 @@ version() {
 
 usage() {
     version
-    echo "Usage: penlook [clone] [update] [build] [test] [deploy] [backup]"
+    echo "Usage: penlook [ clone | update | build | test | deploy | backup ]"
 }
 
 help() {
