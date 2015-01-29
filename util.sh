@@ -26,6 +26,8 @@ help() {
     echo "  test    Run unit and integration tests"
     echo "  deploy  Deploy directly to development server"
     echo
-    echo "  For more information, see https://github.com/sstephenson/bats"
+    echo "  For more information, see https://github.com/penlook/console"
     echo
 }
+
+echo "UTIL COMMAND"
