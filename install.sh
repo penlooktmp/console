@@ -12,6 +12,7 @@ include() {
 	cat $1 >> ./modules/$main.sh
 }
 
+include "auth"
 include "util"
 include "build"
 include "test"
