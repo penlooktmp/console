@@ -6,7 +6,7 @@ Build status
 
 ### Installation
 ```bash
-curl https://raw.githubusercontent.com/penlook/console/master/install.sh | python
+curl https://raw.githubusercontent.com/penlook/console/master/install.sh | bash
 ```
 
 ### Command-line

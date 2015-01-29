@@ -4,16 +4,6 @@
 # license that can be found in the LICENSE file.
 # Loi Nguyen <loint@penlook.com>
 
-# CLI Main
-main() {
-
-	if [ ! -e $1 ]
-	then
-		$1_main
-	else
-		help
-	fi
+clean_main() {
+	echo "CLEANUP"
 }
-
-main $@
-

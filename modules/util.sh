@@ -18,13 +18,14 @@ usage() {
 help() {
     usage
     echo
-    echo "  Penlook CLI"
+    echo "  Penlook Cli"
     echo
     echo "  clone   Initialize project"
     echo "  update  Pull all repositories"
     echo "  build   Build all submodules"
     echo "  test    Run unit and integration tests"
     echo "  deploy  Deploy directly to development server"
+    echo "  backup  Create backup source code and database"
     echo
     echo "  For more information, see https://github.com/penlook/console"
     echo
