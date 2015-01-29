@@ -4,25 +4,29 @@
 # license that can be found in the LICENSE file.
 # Loi Nguyen <loint@penlook.com>
 
-USER=`whoami`
-export GOPATH="/home/$USER"
-ROOT="/home/$USER/src/github.com"
-mkdir -p $ROOT
-sudo rm -rf $ROOT/*
-cd $ROOT
-git clone git@github.com:penlook/penlook.git --recursive
-cd penlook
-git submodule foreach git checkout master
-git submodule foreach git submodule update --init --recursive
+clone_main() {
 
-# backend
-cd backend
-curl -sS https://getcomposer.org/installer | php
-php composer.phar update
-cd ..
+	USER=`whoami`
+	export GOPATH="/home/$USER"
+	ROOT="/home/$USER/src/github.com"
+	mkdir -p $ROOT
+	sudo rm -rf $ROOT/*
+	cd $ROOT
+	git clone git@github.com:penlook/penlook.git --recursive
+	cd penlook
+	git submodule foreach git checkout master
+	git submodule foreach git submodule update --init --recursive
 
-# service
-cd service
-go get -v ./...
-go get github.com/stretchr/testify/assert
-cd ..
+	# backend
+	cd backend
+	curl -sS https://getcomposer.org/installer | php
+	php composer.phar update
+	cd ..
+
+	# service
+	cd service
+	go get -v ./...
+	go get github.com/stretchr/testify/assert
+	cd ..
+
+}

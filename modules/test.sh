@@ -4,5 +4,7 @@
 # license that can be found in the LICENSE file.
 # Loi Nguyen <loint@penlook.com>
 
-echo "PENLOOK TEST"
+test_main() {
+	echo "BUILD"
+}
 

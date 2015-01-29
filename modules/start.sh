@@ -4,4 +4,6 @@
 # license that can be found in the LICENSE file.
 # Loi Nguyen <loint@penlook.com>
 
-echo "START"
+start_main() {
+	echo "BUILD"
+}

@@ -29,5 +29,3 @@ help() {
     echo "  For more information, see https://github.com/penlook/console"
     echo
 }
-
-echo "UTIL COMMAND"
