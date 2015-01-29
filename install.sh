@@ -17,7 +17,9 @@ install() {
 
 	include "auth"
 	include "util"
+	include "clone"
 	include "build"
+	include "deploy"
 	include "test"
 	include "start"
 	include "stop"
