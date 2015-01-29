@@ -6,19 +6,22 @@
 
 set -e
 
-version() {
-    echo "Penlook Cli 1.0.0"
+version_main() {
+    echo "PENLOOK CLI 1.0.0"
 }
 
-usage() {
-    version
-    echo "Usage: penlook [ clone | update | build | test | deploy | backup ]"
-}
-
-help() {
-    usage
+usage_main() {
+    version_main
     echo
-    echo "  Penlook Cli"
+    echo "Usage: penlook [ clone | update | build | test | deploy | backup ]"
+    echo
+}
+
+help_main() {
+    usage_main
+    echo
+    echo
+    echo "  PENLOOK CLI"
     echo
     echo "  clone   Initialize project"
     echo "  update  Pull all repositories"
@@ -28,5 +31,6 @@ help() {
     echo "  backup  Create backup source code and database"
     echo
     echo "  For more information, see https://github.com/penlook/console"
+    echo
     echo
 }
