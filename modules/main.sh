@@ -11,7 +11,7 @@ main() {
 	then
 		$1_main
 	else
-		help_main()
+		help_main
 	fi
 }
 

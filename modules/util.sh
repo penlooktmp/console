@@ -11,17 +11,13 @@ version_main() {
 }
 
 usage_main() {
+    echo
     version_main
-    echo
     echo "Usage: penlook [ clone | update | build | test | deploy | backup ]"
-    echo
 }
 
 help_main() {
     usage_main
-    echo
-    echo
-    echo "  PENLOOK CLI"
     echo
     echo "  clone   Initialize project"
     echo "  update  Pull all repositories"
@@ -31,6 +27,5 @@ help_main() {
     echo "  backup  Create backup source code and database"
     echo
     echo "  For more information, see https://github.com/penlook/console"
-    echo
     echo
 }
