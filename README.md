@@ -15,13 +15,14 @@ curl https://raw.githubusercontent.com/penlook/console/master/install.sh | bash
 penlook clone update build test deploy backup
 ```
 
-+ clone   : Initialize project
-+ update  : Pull all repositories
-+ build   : Build all submodules
-+ test    : Run unit and integration tests
-+ deploy  : Deploy directly to development server
-+ backup  : Create backup for source code and database
-+ server  : Multiple server management
-+ clean   : Cleanup project
-+ version : Current version of Penlook
++ clone   : Initialize project (implemented)
++ update  : Pull all repositories (not implemented)
++ build   : Build all submodules  (not implemented)
++ test    : Run unit and integration tests (not implemented)
++ deploy  : Deploy directly to development server (not implemented)
++ backup  : Create backup for source code and database (not implemented)
++ server  : Multiple server management (not implemented)
++ clean   : Cleanup project (not implemented)
++ help    : Help command (implemented)
++ version : Current version of Penlook (implemented)
 
