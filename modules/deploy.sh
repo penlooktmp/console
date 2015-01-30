@@ -5,5 +5,27 @@
 # Loi Nguyen <loint@penlook.com>
 
 deploy_main() {
-	echo "BUILD"
+
+	deploy_check()
+	deploy_run()
 }
+
+# Check deploy component
+deploy_check() {
+	USER=`whoami`
+	ROOT="/home/$USER/src/github.com"
+
+	if [ -d "$ROOT/penlook/deploy" ]
+	then
+		ROOT_DEPLOY="$ROOT/penlook"
+	else
+		ROOT_DEPLOY="/tmp"
+		cd $ROOT_DEPLOY
+		penlook clone deploy
+	fi
+}
+
+deploy_run() {
+	echo "START DEPLOY"
+}
+

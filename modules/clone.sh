@@ -6,7 +6,20 @@
 
 # Clone project from Github
 clone_main() {
-	clone_all
+	if [ ! -e $1 ] && [ "$1" != "*" ]
+	then
+		clone_one $1
+	else
+		clone_all
+	fi
+}
+
+# Clone one submodule
+clone_one() {
+	git clone git@github.com:penlook/$1.git --recursive
+	cd $1
+	git submodule foreach git checkout master
+	git submodule foreach git submodule update --init --recursive
 }
 
 # Clone all submodule and
