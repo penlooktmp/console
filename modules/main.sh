@@ -7,7 +7,7 @@
 # CLI Main
 main() {
 
-	if [ ! -e "$1" ]
+	if [ ! -e $1 ]
 	then
 		if [ ! -e "~/.ssh/id_rsa" ]
 		then
