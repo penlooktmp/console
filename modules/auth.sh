@@ -42,8 +42,10 @@ auth_key() {
 	if [ -e "~/.ssh/id_rsa.pub" ]
 	then
 		echo "SSH Key does not exists"
-		echo "using the below command to create new pair"
+		echo "using the below command to create new pair and test it"
 		echo "$ penlook auth @email"
+		echo "$ penlook auth test"
+
 	else
 		echo
 		cat ~/.ssh/id_rsa.pub
