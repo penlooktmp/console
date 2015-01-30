@@ -17,6 +17,7 @@ penlook setup ubuntu
 penlook clone backend
 ```
 
++ auth    : Server authentication by ssh key (not yet implemented)
 + clone   : Initialize project (implemented)
 + update  : Pull all repositories (not yet implemented)
 + build   : Build all submodules  (not yet implemented)
@@ -31,7 +32,19 @@ penlook clone backend
 
 ### Documentation
 
-1. Clone
+1. Auth
+
++ Server Authentication
+```bash
+$ penlook auth @email
+```
+
++ View private key
+```bash
+$ penlook auth key
+```
+
+2. Clone
 
 + Clone project
 ```bash
@@ -48,9 +61,21 @@ $ penlook clone backend
 $ penlook clone list
 ```
 
-2. Server
+3. Server
 
 + List all instance node in network
 ```bash
 $ penlook server list
+```
+
+4. Setup
+
++ Setup fresh installation in centos
+```bash
+$ penlook setup centos
+```
+
++ Setup fresh installation in unbuntu
+```bash
+$ penlook setup ubuntu
 ```
