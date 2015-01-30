@@ -9,8 +9,19 @@ main() {
 
 	if [ ! -e $1 ]
 	then
-		# Remove first argumentin args
-		$1_main "${@:2}"
+		if [ -e "~/.ssh/id_rsa" ]
+		then
+			$1_main "${@:2}"
+		else
+			if [ $1 != "auth" ]
+			then
+				echo "Please using below command to login"
+				echo "\$ penlook auth your_email"
+				echo
+			else
+				$1_main "${@:2}"
+			fi
+		fi
 	else
 		help_main
 	fi

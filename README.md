@@ -58,11 +58,7 @@ $ penlook clone
 + Clone custom submodule
 ```bash
 $ penlook clone backend
-```
-
-+ List all submodules available
-```bash
-$ penlook clone list
+$ penlook clone service
 ```
 
 3. Server

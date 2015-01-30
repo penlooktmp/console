@@ -21,13 +21,14 @@ auth_main() {
 
 # Generate new SSH key and view it
 auth_generatekey() {
-	if [ -e "~/.ssh/id_rsa" ]
+	USER=`whoami`
+	if [ -e "/home/$USER/.ssh/id_rsa" ]
 	then
+		echo "SSH Key is already exist"
+	else
 		echo -ne '\n' | ssh-keygen -t rsa -C $1
 		eval `ssh-agent -s`
 		ssh-add ~/.ssh/id_rsa
-	else
-		echo "SSH Key is already exist"
 	fi
 
 	echo -ne "Please copy below public key and paste into Github server \n"
