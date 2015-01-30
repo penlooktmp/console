@@ -9,10 +9,12 @@ Build status
 curl https://raw.githubusercontent.com/penlook/console/master/install.sh | bash
 ```
 
-### Command-line
+### Sample CLI
 
 ```bash
-penlook clone update build test deploy backup
+penlook server list
+penlook setup ubuntu
+penlook clone backend
 ```
 
 + clone   : Initialize project (implemented)
