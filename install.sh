@@ -28,6 +28,8 @@ install() {
 	include "start"
 	include "stop"
 	include "clean"
+	include "server"
+	include "test"
 	include "main"
 
 	sudo chmod +x $main
