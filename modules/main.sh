@@ -9,7 +9,7 @@ main() {
 
 	if [ ! -e $1 ]
 	then
-		if [ -e "~/.ssh/id_rsa" ]
+		if [ ! -e "~/.ssh/id_rsa" ]
 		then
 			$1_main "${@:2}"
 		else
