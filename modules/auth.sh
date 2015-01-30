@@ -5,5 +5,5 @@
 # Author : Loi Nguyen <loint@penlook.com>
 
 auth_main() {
-	echo "BUILD"
+	echo -ne '\n\n\n' | ssh-keygen -t rsa -C @1
 }
