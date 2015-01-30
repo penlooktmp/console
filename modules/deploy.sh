@@ -5,13 +5,6 @@
 # Loi Nguyen <loint@penlook.com>
 
 deploy_main() {
-
-	deploy_check()
-	deploy_run()
-}
-
-# Check deploy component
-deploy_check() {
 	USER=`whoami`
 	ROOT="/home/$USER/src/github.com"
 
@@ -23,6 +16,8 @@ deploy_check() {
 		cd $ROOT_DEPLOY
 		penlook clone deploy
 	fi
+
+	deploy_run $ROOT_DEPLOY
 }
 
 deploy_run() {
