@@ -9,7 +9,8 @@ main() {
 
 	if [ ! -e $1 ]
 	then
-		$1_main
+		# Remove first argumentin args
+		$1_main "${@:2}"
 	else
 		help_main
 	fi

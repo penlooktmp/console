@@ -15,19 +15,23 @@ version_main() {
 usage_main() {
     echo
     version_main
-    echo "Usage: penlook [ clone | update | build | test | deploy | backup ]"
+    echo "Usage: penlook <option>"
 }
 
 # Show command document
 help_main() {
     usage_main
+    echo "Options:"
     echo
+    echo "  auth    Server authentication"
     echo "  clone   Initialize project"
     echo "  update  Pull all repositories"
     echo "  build   Build all submodules"
+    echo "  clean   Clean up project"
     echo "  test    Run unit and integration tests"
     echo "  deploy  Deploy directly to development server"
     echo "  server  Multiple cluster status"
+    echo "  setup   Setup development environment"
     echo "  backup  Create backup source code and database"
     echo "  help    Support more command"
     echo "  version current version"

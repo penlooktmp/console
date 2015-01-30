@@ -19,18 +19,20 @@ install() {
 		echo $'\n'  >> $main
 	}
 
-	include "auth"
 	include "util"
+	include "auth"
 	include "clone"
 	include "build"
 	include "deploy"
 	include "test"
 	include "start"
 	include "stop"
+	include "clean"
 	include "main"
 
 	sudo chmod +x $main
 	sudo cp -rf $main /usr/bin/$main
+	echo "Install complete !"
 }
 
 # Before install we need to clone the package
@@ -46,10 +48,15 @@ prepare() {
 # in /tmp/console
 cleanup() {
 	rm -rf /tmp/console
-	echo "Install complete !"
 	penlook
 }
 
-prepare
-install
-cleanup
+if [ ! -e $1 ] && [ $1 == "debug" ]
+then
+	install
+else
+	prepare
+	install
+	cleanup
+fi
+

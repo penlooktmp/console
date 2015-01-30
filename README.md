@@ -39,9 +39,13 @@ penlook clone backend
 $ penlook auth @email
 ```
 
-+ View private key
++ View public key
 ```bash
 $ penlook auth key
+```
++ Test authentication
+```bash
+$ penlook auth test
 ```
 
 2. Clone
