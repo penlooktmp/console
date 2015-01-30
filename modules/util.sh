@@ -6,16 +6,19 @@
 
 set -e
 
+# Show version number of Cli
 version_main() {
     echo "PENLOOK CLI 1.0.0"
 }
 
+# Show usage
 usage_main() {
     echo
     version_main
     echo "Usage: penlook [ clone | update | build | test | deploy | backup ]"
 }
 
+# Show command document
 help_main() {
     usage_main
     echo

@@ -29,3 +29,21 @@ penlook clone backend
 + help    : Help command (implemented)
 + version : Current version of Penlook (implemented)
 
+### Documentation
+
+1. Clone
+
+Clone all submodules
+```bash
+penlook clone
+```
+
+Clone custom submodule
+```bash
+penlook clone backend
+```
+
+List all submodules available
+```bash
+penlook clone list
+```
