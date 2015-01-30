@@ -55,12 +55,18 @@ auth_key() {
 
 # Test authentication
 auth_test() {
+	echo
 	echo "yes" | ssh -T git@github.com
+	echo
 }
 
 # Clear current sshkey
 auth_clear() {
 	rm -rf ~/.ssh/*
+	USER=`whoami`
+	echo
+	echo "Removed all ssh key for $USER"
+	echo
 }
 
 # Option for authentication
