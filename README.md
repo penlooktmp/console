@@ -17,7 +17,7 @@ penlook setup ubuntu
 penlook clone backend
 ```
 
-+ auth    : Server authentication by ssh key (not yet implemented)
++ auth    : Server authentication by ssh key (implemented)
 + clone   : Initialize project (implemented)
 + update  : Pull all repositories (not yet implemented)
 + build   : Build all submodules  (not yet implemented)
