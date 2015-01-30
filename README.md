@@ -33,17 +33,24 @@ penlook clone backend
 
 1. Clone
 
-Clone all submodules
++ Clone project
 ```bash
-penlook clone
+$ penlook clone
 ```
 
-Clone custom submodule
++ Clone custom submodule
 ```bash
-penlook clone backend
+$ penlook clone backend
 ```
 
-List all submodules available
++ List all submodules available
 ```bash
-penlook clone list
+$ penlook clone list
+```
+
+2. Server
+
++ List all instance node in network
+```bash
+$ penlook server list
 ```
