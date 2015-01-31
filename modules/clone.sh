@@ -58,7 +58,11 @@ clone_module_service() {
 	USER=`whoami`
 	cd "/home/$USER/src/github.com"
 	mkdir -p google
+	cd google
 	git clone git@github.com:penlook/cayley.git
+	cd cayley
+	git checkout master
+	go get -v ./...
 	go build
 	cd $TMP
 

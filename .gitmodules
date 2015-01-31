@@ -1,0 +1,6 @@
+[submodule "setup"]
+	path = setup
+	url = https://github.com/penlook/setup.git
+[submodule "deploy"]
+	path = deploy
+	url = https://github.com/penlook/deploy.git
