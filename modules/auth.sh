@@ -72,8 +72,8 @@ auth_clear() {
 # Option for authentication
 auth_option() {
 	echo
-	echo "Usage: penlook auth <option>"
-	echo "Options:"
+	echo "Usage: penlook auth <parameter>"
+	echo "Parameters:"
     echo
     echo "  \$email  Generate new ssh key using email address"
     echo "  key     View current public key"

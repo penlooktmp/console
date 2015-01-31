@@ -5,23 +5,30 @@
 # Loi Nguyen <loint@penlook.com>
 
 setup_main() {
-	USER=`whoami`
-	ROOT="/home/$USER/src/github.com"
 
-	if [ -d "$ROOT/penlook/setup" ]
+	if [ -e $1 ]
 	then
-		ROOT_SETUP="$ROOT/penlook"
+		setup_option
 	else
-		ROOT_SETUP="/tmp"
-		cd $ROOT_SETUP
-		penlook clone deploy
+		ROOT="/usr/local/src/console"
+		setup_run $ROOT $1
 	fi
-
-	deploy_run $ROOT_SETUP
 }
 
 setup_run() {
 	echo "START SETUP"
+	ls -la $1
 }
 
+# Option for authentication
+setup_option() {
+	echo
+	echo "Usage: penlook setup <parameter>"
+	echo "Parameters:"
+    echo
+    echo "  ubuntu  Ubuntu"
+    echo "  centos  Centos"
+    echo "  coreos  CoreOS"
+    echo
+}
 

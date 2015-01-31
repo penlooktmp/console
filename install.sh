@@ -29,36 +29,50 @@ install() {
 	include "stop"
 	include "clean"
 	include "server"
+	include "setup"
 	include "test"
 	include "main"
 
 	sudo chmod +x $main
 	sudo cp -rf $main /usr/bin/$main
 	echo "Install complete !"
+	penlook
+}
+
+# Before install we need to copy the package
+# which includes all necessary modules
+prepare_local() {
+	CURRENT=`pwd`
+	console="/usr/local/src"
+	mkdir -p $console
+	sudo rm -rf $console/*
+	sudo chmod a+w $console && cd $console
+	mkdir -p console
+	cd console
+	cp -rf $CURRENT/* ./
 }
 
 # Before install we need to clone the package
 # which includes all necessary modules
-prepare() {
-	cd /tmp
-	sudo rm -rf console
+prepare_remote() {
+	console="/usr/local/src"
+	mkdir -p $console
+	sudo rm -rf $console/*
+	sudo chmod a+w $console && cd $console
 	git clone https://github.com/penlook/console.git
 	cd console
+	git submodule foreach git submodule update --init --recursive
+	git submodule foreach git checkout master
 }
 
-# After installing, remove all temporary files
-# in /tmp/console
-cleanup() {
-	rm -rf /tmp/console
-	penlook
-}
-
+# Enable for debug mode
+# Using debug as parameter
 if [ ! -e $1 ] && [ $1 == "debug" ]
 then
+	prepare_local
 	install
 else
-	prepare
+	prepare_remote
 	install
-	cleanup
 fi
 

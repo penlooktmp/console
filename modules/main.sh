@@ -13,7 +13,7 @@ main() {
 		exit 0
 	fi
 
-	if [ ! -e $1 ]
+	if  [ `type -t $1_main`"" == 'function' ]
 	then
 		if [ ! -e "~/.ssh/id_rsa" ]
 		then
