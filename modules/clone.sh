@@ -53,6 +53,15 @@ clone_module_backend() {
 
 # Configure for module service
 clone_module_service() {
+	# Exception
+	TMP=`pwd`
+	USER=`whoami`
+	cd "/home/$USER/src/github.com"
+	mkdir -p google
+	git clone git@github.com:penlook/cayley.git
+	go build
+	cd $TMP
+
 	cd service
 	go get -v ./...
 	go get github.com/stretchr/testify/assert
