@@ -35,8 +35,8 @@ clone_all() {
 	git clone git@github.com:penlook/penlook.git --recursive
 	cd penlook
 
-	git submodule foreach git checkout master
-	git submodule foreach git submodule update --init --recursive
+	sudo git submodule foreach git submodule update --init --recursive
+	sudo git submodule foreach git checkout master
 
 	clone_module_backend
 	clone_module_service
