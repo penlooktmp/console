@@ -6,16 +6,16 @@ Build status
 
 ### Installation
 ```bash
-curl https://raw.githubusercontent.com/penlook/console/master/install.sh | bash
+$ curl https://raw.githubusercontent.com/penlook/console/master/install.sh | bash
 ```
 
-### Sample CLI
+### Usage
 
 ```bash
-penlook server list
-penlook setup ubuntu
-penlook clone backend
+$ penlook <option>
 ```
+
+Options:
 
 + auth    : Server authentication by ssh key (implemented)
 + clone   : Initialize project (implemented)
