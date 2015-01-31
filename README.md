@@ -59,8 +59,7 @@ $ penlook clone
 
 + Clone custom submodule
 ```bash
-$ penlook clone deploy
-$ penlook clone setup
+$ penlook clone backend
 ```
 
 + List all instance in network
