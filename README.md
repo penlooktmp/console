@@ -32,23 +32,25 @@ penlook clone backend
 
 ### Documentation
 
-1. Auth
-
-+ Server Authentication
++ Create ssh key authentication
 ```bash
 $ penlook auth @email
 ```
 
-+ View public key
++ View current public key
 ```bash
 $ penlook auth key
 ```
-+ Test authentication
+
++ Clear ssh key of current user
+```bash
+$ penlook auth clear
+```
+
++ Test authentication with github server
 ```bash
 $ penlook auth test
 ```
-
-2. Clone
 
 + Clone project
 ```bash
@@ -57,18 +59,14 @@ $ penlook clone
 
 + Clone custom submodule
 ```bash
-$ penlook clone backend
-$ penlook clone service
+$ penlook clone deploy
+$ penlook clone setup
 ```
 
-3. Server
-
-+ List all instance node in network
++ List all instance in network
 ```bash
 $ penlook server list
 ```
-
-4. Setup
 
 + Setup fresh installation in centos
 ```bash
@@ -78,4 +76,14 @@ $ penlook setup centos
 + Setup fresh installation in unbuntu
 ```bash
 $ penlook setup ubuntu
+```
+
++ Help command
+```bash
+$ penlook help
+```
+
++ Penlook Cli version
+```bash
+$ penlook version
 ```
