@@ -12,7 +12,7 @@ $ curl https://raw.githubusercontent.com/penlook/console/master/install.sh | bas
 ### Usage
 
 ```bash
-$ penlook <option>
+$ penlook <option> <parameter>
 ```
 
 Options:

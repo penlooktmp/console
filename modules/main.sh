@@ -7,6 +7,12 @@
 # CLI Main
 main() {
 
+	if [ "$(id -u)" == "0" ]
+	then
+		echo "Can not use penlook cli under root permission !"
+		exit 0
+	fi
+
 	if [ ! -e $1 ]
 	then
 		if [ ! -e "~/.ssh/id_rsa" ]
