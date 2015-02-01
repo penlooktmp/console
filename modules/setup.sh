@@ -24,8 +24,7 @@ setup_Ubuntu() {
 }
 
 setup_CentOS() {
-	
-	sudo python centos.py
+	sudo python src/gitbub.com/penlook/console/setup/centos.py
 }
 
 # Option for authentication
