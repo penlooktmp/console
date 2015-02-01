@@ -58,7 +58,7 @@ prepare_remote() {
 	penlook="/usr/local/src/penlook"
 	sudo mkdir -p $penlook
 	sudo rm -rf $penlook/*
-	sudo chmod a+w $console && cd $console
+	sudo chmod a+w $penlook && cd $penlook
 	git clone https://github.com/penlook/console.git
 	cd console
 	git submodule foreach git checkout master
