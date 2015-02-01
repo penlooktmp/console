@@ -5,14 +5,7 @@
 # Loi Nguyen <loint@penlook.com>
 
 setup_main() {
-
-	if [ -e $1 ]
-	then
-		setup_option
-	else
-		ROOT="/usr/local/src/console"
-		setup_run $ROOT $1
-	fi
+	tr -s ' \011' '\012' < /etc/issue | head -n 1
 }
 
 setup_run() {
