@@ -5,12 +5,28 @@
 # Loi Nguyen <loint@penlook.com>
 
 setup_main() {
-	tr -s ' \011' '\012' < /etc/issue | head -n 1
+	OS=$(tr -s ' \011' '\012' < /etc/issue | head -n 1)
+	case "$OS" in
+
+	"Ubuntu")
+		setup_$OS
+		;;
+	"CentOS")
+		setup_$OS
+		;;
+	*) echo "Current operation system is not supported !"
+		;;
+	esac
 }
 
-setup_run() {
-	echo "START SETUP"
-	ls -la $1
+setup_Ubuntu() {
+	echo 'not yet implemented !'
+	exit
+}
+
+setup_CentOS() {
+	cd setup
+	sudo python centos.py
 }
 
 # Option for authentication
