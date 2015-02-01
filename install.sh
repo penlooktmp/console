@@ -55,13 +55,14 @@ prepare_local() {
 # Before install we need to clone the package
 # which includes all necessary modules
 prepare_remote() {
-	console="/usr/local/src"
-	mkdir -p $console
-	sudo rm -rf $console/*
+	penlook="/usr/local/src/penlook"
+	sudo mkdir -p $penlook
+	sudo rm -rf $penlook/*
 	sudo chmod a+w $console && cd $console
 	git clone https://github.com/penlook/console.git
 	cd console
-	git submodule foreach git submodule update --init --recursive
+	git submodule foreach git checkout master
+	git submodule update --init --recursive
 	git submodule foreach git checkout master
 }
 

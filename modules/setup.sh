@@ -7,7 +7,6 @@
 setup_main() {
 	OS=$(tr -s ' \011' '\012' < /etc/issue | head -n 1)
 	case "$OS" in
-
 	"Ubuntu")
 		setup_$OS
 		;;
@@ -25,7 +24,7 @@ setup_Ubuntu() {
 }
 
 setup_CentOS() {
-	cd setup
+	
 	sudo python centos.py
 }
 
