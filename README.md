@@ -67,14 +67,9 @@ $ penlook clone backend
 $ penlook server list
 ```
 
-+ Setup fresh installation in centos
++ Setup fresh installation
 ```bash
-$ penlook setup centos
-```
-
-+ Setup fresh installation in unbuntu
-```bash
-$ penlook setup ubuntu
+$ penlook setup
 ```
 
 + Help command
