@@ -25,7 +25,7 @@ Options:
 + deploy  : Deploy directly to development server (not yet implemented)
 + backup  : Create backup for source code and database (not yet implemented)
 + server  : Multiple server management (not yet implemented)
-+ setup   : Setup development environment (not yet implemented)
++ setup   : Setup development environment (implemented for CentOS)
 + clean   : Cleanup project (not yet implemented)
 + help    : Help command (implemented)
 + version : Current version of Penlook (implemented)
@@ -57,10 +57,8 @@ $ penlook auth test
 $ penlook clone
 ```
 
-+ Clone custom submodule
-```bash
-$ penlook clone backend
-```
++ Upate project
+$ penlook update
 
 + List all instance in network
 ```bash
