@@ -47,18 +47,35 @@ $ penlook auth key
 $ penlook auth clear
 ```
 
-+ Test authentication with github server
++ Test authentication with server
 ```bash
 $ penlook auth test
 ```
 
-+ Clone project
++ Clone project from github
 ```bash
 $ penlook clone
 ```
 
-+ Upate project
++ Upate project source code
+```bash
 $ penlook update
+```
+
++ Deloy project to instance network
+```bash
+$ penlook deploy
+```
+
++ Deploy project to development server
+```bash
+$ penlook deploy master
+```
+
++ Deploy project to worker server
+```bash
+$ penlook deploy worker
+```
 
 + List all instance in network
 ```bash
@@ -68,6 +85,21 @@ $ penlook server list
 + Setup fresh installation
 ```bash
 $ penlook setup
+```
+
++ Run unit and integration test
+```bash
+$ penlook test
+```
+
++ Run only unit test
+```bash
+$ penlook test unit
+```
+
++ Run only integration test
+```bash
+$ penlook test integrate
 ```
 
 + Help command
