@@ -5,19 +5,27 @@
 # Loi Nguyen <loint@penlook.com>
 
 setup_main() {
-
-	if [ -e $1 ]
-	then
-		setup_option
-	else
-		ROOT="/usr/local/src/console"
-		setup_run $ROOT $1
-	fi
+	OS=$(tr -s ' \011' '\012' < /etc/issue | head -n 1)
+	case "$OS" in
+	"Ubuntu")
+		setup_$OS
+		;;
+	"CentOS")
+		setup_$OS
+		;;
+	*) echo "Current operation system is not supported !"
+		;;
+	esac
 }
 
-setup_run() {
-	echo "START SETUP"
-	ls -la $1
+setup_Ubuntu() {
+	echo 'not yet implemented !'
+	exit
+}
+
+setup_CentOS() {
+	cd /usr/local/src/penlook/console/setup/
+	sudo python centos.py
 }
 
 # Option for authentication
