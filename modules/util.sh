@@ -39,3 +39,20 @@ help_main() {
     echo "  For more information, see https://github.com/penlook/console"
     echo
 }
+
+# If project does not exist
+# You need to clone it before using
+# this option
+require_project() {
+    USER=`whoami`
+    ROOT="/home/$USER/src/github.com"
+    CONFIG="$ROOT/penlook/config"
+
+    if [ ! -d "$CONFIG" ]
+    then
+        echo "You need to clone project before $1 it"
+    else
+        cd $CONFIG
+        python ./build.py
+    fi
+}
