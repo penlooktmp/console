@@ -23,6 +23,7 @@ install() {
 	include "auth"
 	include "clone"
 	include "build"
+	include "config"
 	include "deploy"
 	include "test"
 	include "start"

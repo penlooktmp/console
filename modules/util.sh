@@ -46,7 +46,7 @@ help_main() {
 # this option
 require() {
 
-    if [ ! -e $1 ]
+    if [ -e "$1" ]
     then
         echo "Missing path ! Which path do you want to check ?"
         exit
@@ -60,4 +60,6 @@ require() {
     then
         echo "You need to clone project first !"
     fi
+
+    echo $FOLDER
 }

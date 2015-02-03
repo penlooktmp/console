@@ -4,4 +4,8 @@
 # license that can be found in the LICENSE file.
 # Loi Nguyen <loint@penlook.com>
 
-require "config"
+config_main() {
+	CONFIG=$(require "config")
+	cd $CONFIG
+	python ./build.py
+}
