@@ -26,6 +26,7 @@ help_main() {
     echo "  auth    Server authentication"
     echo "  clone   Initialize project"
     echo "  update  Pull all repositories"
+    echo "  config  Configure project"
     echo "  build   Build all submodules"
     echo "  clean   Clean up project"
     echo "  test    Run unit and integration tests"
@@ -43,16 +44,20 @@ help_main() {
 # If project does not exist
 # You need to clone it before using
 # this option
-require_project() {
+require() {
+
+    if [ ! -e $1 ]
+    then
+        echo "Missing path ! Which path do you want to check ?"
+        exit
+    fi
+
     USER=`whoami`
     ROOT="/home/$USER/src/github.com"
-    CONFIG="$ROOT/penlook/config"
+    FOLDER="$ROOT/penlook/$1"
 
-    if [ ! -d "$CONFIG" ]
+    if [ ! -d "$FOLDER" ]
     then
-        echo "You need to clone project before $1 it"
-    else
-        cd $CONFIG
-        python ./build.py
+        echo "You need to clone project first !"
     fi
 }

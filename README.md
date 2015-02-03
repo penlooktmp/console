@@ -25,6 +25,7 @@ Options:
 + deploy  : Deploy directly to development server (not yet implemented)
 + backup  : Create backup for source code and database (not yet implemented)
 + server  : Multiple server management (not yet implemented)
++ config  : Build configuration file
 + setup   : Setup development environment (implemented for CentOS)
 + clean   : Cleanup project (not yet implemented)
 + help    : Help command (implemented)
@@ -60,6 +61,11 @@ $ penlook clone
 + Upate project source code
 ```bash
 $ penlook update
+```
+
++ Config project
+```bash
+$ penlook config
 ```
 
 + Deloy project to instance network
