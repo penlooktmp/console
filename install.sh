@@ -44,10 +44,10 @@ install() {
 # which includes all necessary modules
 prepare_local() {
 	CURRENT=`pwd`
-	console="/usr/local/src"
-	mkdir -p $console
-	sudo rm -rf $console/*
-	sudo chmod a+w $console && cd $console
+	penlook="/usr/local/src/penlook"
+	sudo mkdir -p $penlook
+	sudo rm -rf $penlook/*
+	sudo chmod a+w $penlook && cd $penlook
 	mkdir -p console
 	cd console
 	cp -rf $CURRENT/* ./
