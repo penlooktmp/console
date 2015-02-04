@@ -4,7 +4,7 @@
 # license that can be found in the LICENSE file.
 # Loi Nguyen <loint@penlook.com>
 
-instance_main() {
+server_main() {
 	SERVER=$(require "console/server")
 	cd $SERVER
 	./main.rb instance $@
