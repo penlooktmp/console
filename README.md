@@ -89,6 +89,11 @@ $ penlook deploy worker
 $ penlook server list
 ```
 
++ SSH into instance
+```bash
+$ penlook server ssh < instance_id >
+```
+
 + Setup fresh installation
 ```bash
 $ penlook setup
@@ -97,16 +102,6 @@ $ penlook setup
 + Run unit and integration test
 ```bash
 $ penlook test
-```
-
-+ Run only unit test
-```bash
-$ penlook test unit
-```
-
-+ Run only integration test
-```bash
-$ penlook test integrate
 ```
 
 + Help command
