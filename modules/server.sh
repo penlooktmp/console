@@ -4,8 +4,15 @@
 # license that can be found in the LICENSE file.
 # Loi Nguyen <loint@penlook.com>
 
-server_main() {
+instance_main() {
 	SERVER=$(require "console/server")
 	cd $SERVER
-	./main.rb $@
+	./main.rb instance $@
 }
+
+storage_main() {
+	SERVER=$(require "console/server")
+	cd $SERVER
+	./main.rb storage $@
+}
+
