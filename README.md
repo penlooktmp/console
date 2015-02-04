@@ -17,19 +17,20 @@ $ penlook <option> <parameter>
 
 Options:
 
-+ auth    : Server authentication by ssh key (implemented)
-+ clone   : Initialize project (implemented)
-+ update  : Pull all repositories (not yet implemented)
-+ build   : Build all submodules  (not yet implemented)
-+ test    : Run unit and integration tests (not yet implemented)
-+ deploy  : Deploy directly to development server (not yet implemented)
-+ backup  : Create backup for source code and database (not yet implemented)
-+ server  : Multiple server management (not yet implemented)
-+ config  : Build configuration file
-+ setup   : Setup development environment (implemented for CentOS)
-+ clean   : Cleanup project (not yet implemented)
-+ help    : Help command (implemented)
-+ version : Current version of Penlook (implemented)
++ auth      : Server authentication by ssh key (implemented)
++ clone    : Initialize project (implemented)
++ update   : Pull all repositories (not yet implemented)
++ build    : Build all submodules  (not yet implemented)
++ test     : Run unit and integration tests (not yet implemented)
++ deploy   : Deploy directly to development server (not yet implemented)
++ backup   : Create backup for source code and database (not yet implemented)
++ server   : Server instances management
++ storage  : Storage management
++ config   : Build configuration file
++ setup    : Setup development environment (implemented for CentOS)
++ clean    : Cleanup project (not yet implemented)
++ help     : Help command (implemented)
++ version  : Current version of Penlook (implemented)
 
 ### Documentation
 
