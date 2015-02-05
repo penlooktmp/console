@@ -20,6 +20,7 @@ install() {
 	}
 
 	include "util"
+	include "update"
 	include "auth"
 	include "clone"
 	include "build"
