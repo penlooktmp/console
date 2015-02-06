@@ -17,7 +17,8 @@ $ penlook <option> <parameter>
 
 Options:
 
-+ auth      : Server authentication by ssh key (implemented)
++ auth     : Server authentication by ssh key (implemented)
++ root	   : Go to penlook root directory
 + clone    : Initialize project (implemented)
 + update   : Pull all repositories (not yet implemented)
 + build    : Build all submodules  (not yet implemented)
