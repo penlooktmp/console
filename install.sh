@@ -22,6 +22,7 @@ install() {
 	include "util"
 	include "auth"
 	include "clone"
+	include "root"
 	include "update"
 	include "build"
 	include "config"
