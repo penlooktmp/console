@@ -16,10 +16,11 @@ clone_main() {
 
 # Clone one submodule
 clone_one() {
-	git clone -b master git@github.com:penlook/$1.git --depth=1
+	git clone -b master https://github.com/penlook/$1.git --depth=1
 	cd $1
 	git submodule update --init --recursive --remote --depth=1
-	git submodule sync --recursive && git submodule status
+	git submodule sync --recursive
+	git submodule status
 	git submodule foreach git checkout master
 }
 
@@ -33,10 +34,13 @@ clone_all() {
 	sudo rm -rf $ROOT/*
 
 	cd $ROOT
-	git clone -b master git@github.com:penlook/$1.git --depth=1
-	cd penlook
+	git clone -b master https://github.com:penlook/$1.git --depth=1
+	cd $1
 
-	git submodule update --init --recursive --remote --depth=1 && git submodule sync --recursive && git submodule status
+	git submodule update --init --recursive --remote --depth=1
+	git submodule sync --recursive
+	git submodule status
+	git submodule foreach git checkout master
 
 	clone_module_backend
 	clone_module_service
