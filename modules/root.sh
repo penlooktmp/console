@@ -8,5 +8,5 @@ root_main() {
 	USER=`whoami`
 	ROOT="/home/$USER/src/github.com"
 	cd $ROOT/penlook
-	pwd
+	command cd `pwd`
 }
