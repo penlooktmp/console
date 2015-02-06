@@ -35,7 +35,7 @@ clone_all() {
 
 	cd $ROOT
 	git clone -b master git@github.com:penlook/penlook.git --depth=1
-	cd $1
+	cd penlook
 
 	git submodule update --init --recursive --remote --depth=1
 	git submodule sync --recursive
