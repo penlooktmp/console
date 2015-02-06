@@ -63,8 +63,7 @@ prepare_remote() {
 	sudo chmod a+w $penlook && cd $penlook
 	git clone https://github.com/penlook/console.git
 	cd console
-	git submodule foreach git checkout master
-	git submodule update --init --recursive
+	git submodule foreach git pull origin master
 	git submodule foreach git checkout master
 }
 
