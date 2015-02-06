@@ -63,7 +63,10 @@ prepare_remote() {
 	sudo chmod a+w $penlook && cd $penlook
 	git clone -b master git@github.com:penlook/console.git --depth=1
 	cd console
-	git submodule update --init --recursive --remote --depth=1 && git submodule sync --recursive && git submodule status
+	git submodule update --init --recursive --remote --depth=1
+	git submodule sync --recursive
+	git submodule status
+	git submodule foreach git checkout master
 }
 
 # Enable for debug mode
