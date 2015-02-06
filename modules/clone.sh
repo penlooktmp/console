@@ -32,10 +32,10 @@ clone_all() {
 	sudo rm -rf $ROOT/*
 
 	cd $ROOT
-	git clone -b master git@github.com:penlook/penlook.git --depth=1
+	git clone -b master git@github.com:penlook/$1.git --depth=1
 	cd penlook
 
-	git submodule update --init --recursive && git submodule foreach "(git checkout master; git pull origin master; cd ..;)" --recursive
+	git submodule update --init --recursive --remote --depth=1 && git submodule sync --recursive && git submodule status
 
 	clone_module_backend
 	clone_module_service
