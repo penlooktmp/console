@@ -18,6 +18,7 @@ clone_main() {
 clone_one() {
 	git clone git@github.com:penlook/$1.git --recursive
 	cd $1
+	sudo git submodule foreach git checkout master
 	sudo git submodule foreach git submodule update --init --recursive
 	sudo git submodule foreach git checkout master
 }
