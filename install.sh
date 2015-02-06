@@ -61,7 +61,7 @@ prepare_remote() {
 	sudo mkdir -p $penlook
 	sudo rm -rf $penlook/*
 	sudo chmod a+w $penlook && cd $penlook
-	git clone -b master https://github.com/penlook/console.git --depth=1
+	git clone -b master git@github.com:penlook/console.git --depth=1
 	cd console
 	git submodule update --init --recursive --remote --depth=1
 	git submodule sync --recursive
