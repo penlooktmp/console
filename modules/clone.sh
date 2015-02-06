@@ -16,9 +16,10 @@ clone_main() {
 
 # Clone one submodule
 clone_one() {
-	git clone git@github.com:penlook/$1.git --recursive
+	git clone -b master git@github.com:penlook/$1.git --depth=1
 	cd $1
-	git submodule foreach git pull origin master
+	git submodule update --init --recursive --remote --depth=1
+	git submodule sync --recursive && git submodule status
 	git submodule foreach git checkout master
 }
 
