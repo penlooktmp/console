@@ -7,6 +7,6 @@
 root_main() {
 	USER=`whoami`
 	ROOT="/home/$USER/src/github.com"
-	cd penlook
+	cd $ROOT/penlook
 	pwd
 }
