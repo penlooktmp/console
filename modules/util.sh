@@ -24,6 +24,7 @@ help_main() {
     echo "Options:"
     echo
     echo "  auth    Server authentication"
+    echo "  path    Penlook root directory"
     echo "  clone   Initialize project"
     echo "  update  Pull all repositories"
     echo "  config  Configure project"

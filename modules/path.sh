@@ -9,5 +9,5 @@ path_main() {
 	ROOT="/home/$USER/src/github.com"
 	cd $ROOT/penlook
 	ROOT_PATH=`pwd`
-	echo -e "cd $ROOT_PATH \n"
+	echo -e "\n cd $ROOT_PATH \n"
 }
