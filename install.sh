@@ -42,8 +42,9 @@ install() {
 prepare() {
 	cd /tmp
 	sudo rm -rf console
-	git clone https://github.com/penlook/console.git
+	git clone -b master https://github.com/penlook/console.git --depth=1
 	cd console
+	git submodule update --init --recursive --remote --depth=1 && git submodule sync --recursive && git submodule status
 }
 
 # After installing, remove all temporary files
