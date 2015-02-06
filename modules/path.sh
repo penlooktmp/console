@@ -4,9 +4,10 @@
 # license that can be found in the LICENSE file.
 # Loi Nguyen <loint@penlook.com>
 
-root_main() {
+path_main() {
 	USER=`whoami`
 	ROOT="/home/$USER/src/github.com"
 	cd $ROOT/penlook
-	command cd `pwd`
+	$ROOT_PATH=`pwd`
+	echo -e "cd $ROOT_PATH \n"
 }
