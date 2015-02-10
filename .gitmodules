@@ -7,3 +7,6 @@
 [submodule "server"]
 	path = server
 	url = git@github.com:penlook/server.git
+[submodule "config"]
+	path = config
+	url = git@github.com:penlook/config.git
