@@ -73,15 +73,15 @@ auth_key() {
 }
 
 # Test authentication
+# Remove default ssh client configuaration
+# Send request to github server to compare key pair
 auth_test() {
-
 	SSH_CONFIG="/etc/ssh/ssh_config"
 	[[ -e $SSH_CONFIG ]] && [[ sudo chmod +w $SSH_CONFIG ]] && echo "" > $SSH_CONFIG
 
 	echo
 	echo "yes" | ssh -T git@github.com
 	echo
-
 }
 
 # Clear current sshkey
