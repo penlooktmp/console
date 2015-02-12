@@ -58,7 +58,6 @@ install() {
 	sudo chmod +x $main
 	sudo cp -rf $main /usr/bin/$main
 	echo "Install complete !"
-	penlook
 }
 
 # Before install we need to copy the package
