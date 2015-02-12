@@ -24,6 +24,9 @@
 # +--------------------------------------------------------------------------+
 
 setup_main() {
+
+	cd /usr/local/src/penlook/console/setup
+
 	OS=$(tr -s ' \011' '\012' < /etc/issue | head -n 1)
 	case "$OS" in
 	"Ubuntu")
