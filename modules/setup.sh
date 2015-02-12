@@ -38,13 +38,12 @@ setup_main() {
 }
 
 setup_Ubuntu() {
-	echo 'not yet implemented !'
-	exit
+	sudo python main.py koding
 }
 
 setup_CentOS() {
 	cd /usr/local/src/penlook/console/setup/
-	sudo python centos.py
+	sudo python main.py centos
 }
 
 # Option for authentication
