@@ -43,14 +43,14 @@ setup_main() {
 setup_Ubuntu() {
 	if [ -d "/etc/koding" ]
 	then
-		sudo python main.py koding
+		python main.py koding
 	else
-		sudo python main.py ubuntu
+		python main.py ubuntu
 	fi
 }
 
 setup_CentOS() {
-	sudo python main.py centos
+	python main.py centos
 }
 
 # Option for authentication
