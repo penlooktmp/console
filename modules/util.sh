@@ -67,7 +67,7 @@ help_main() {
 # this option
 require() {
 
-    if [ -e "$1" ]
+    if [[ -e "$1" ]]
     then
         echo "Missing path ! Which path do you want to check ?"
         exit
@@ -77,7 +77,7 @@ require() {
     ROOT="/home/$USER/src/github.com"
     FOLDER="$ROOT/penlook/$1"
 
-    if [ ! -d "$FOLDER" ]
+    if [[ ! -d "$FOLDER" ]]
     then
         echo "You need to clone project first !"
     fi

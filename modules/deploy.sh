@@ -27,7 +27,7 @@ deploy_main() {
 	USER=`whoami`
 	ROOT="/home/$USER/src/github.com"
 
-	if [ -d "$ROOT/penlook/deploy" ]
+	if [[ -d "$ROOT/penlook/deploy" ]]
 	then
 		ROOT_DEPLOY="$ROOT/penlook"
 	else

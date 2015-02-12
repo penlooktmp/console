@@ -25,11 +25,11 @@
 
 # Server authentication
 auth_main() {
-	if [ -e $1 ]
+	if [[ -e $1 ]]
 	then
 		auth_option
 	else
-		if [ $1 == "key" ] || [ $1 == "test" ] || [ $1 == "clear" ]
+		if [[ $1 == "key" ]] || [[ $1 == "test" ]] || [[ $1 == "clear" ]]
 		then
 			auth_$1
 		else
@@ -41,7 +41,7 @@ auth_main() {
 # Generate new SSH key and view it
 auth_generatekey() {
 	USER=`whoami`
-	if [ -e "/home/$USER/.ssh/id_rsa" ]
+	if [[ -e "/home/$USER/.ssh/id_rsa" ]]
 	then
 		echo "SSH Key is already exist"
 	else
