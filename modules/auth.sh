@@ -29,7 +29,7 @@ auth_main() {
 	then
 		auth_option
 	else
-		if [[ $1 == "key" ]] || [[ $1 == "test" ]] || [[ $1 == "clear" ]]
+		if [ $1 == "key" ] || [ $1 == "test" ] || [[ $1 == "clear" ]
 		then
 			auth_$1
 		else
@@ -58,7 +58,7 @@ auth_generatekey() {
 # View current ssh key
 # If does not exist, create new pair
 auth_key() {
-	if [ -e "~/.ssh/id_rsa.pub" ]
+	if [[ -e "~/.ssh/id_rsa.pub" ]]
 	then
 		echo "SSH Key does not exists"
 		echo "using the below command to create new pair and test it"

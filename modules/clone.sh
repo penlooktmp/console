@@ -25,7 +25,7 @@
 
 # Clone project from Github
 clone_main() {
-	if [[ ! -e $1 ]] && [[ "$1" != "*" ]]
+	if [[ ! -e $1 ]] && [ "$1" != "*" ]
 	then
 		clone_one $1
 	else
