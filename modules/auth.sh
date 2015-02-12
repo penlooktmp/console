@@ -79,7 +79,7 @@ auth_test() {
 	SSH_CONFIG="/etc/ssh/ssh_config"
 	if [ -e $SSH_CONFIG ]
 	then
-		sudo chmod +w $SSH_CONFIG
+		sudo chmod a+w $SSH_CONFIG
 		echo "" > $SSH_CONFIG
 	fi
 
