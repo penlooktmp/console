@@ -25,7 +25,7 @@
 
 # Server authentication
 auth_main() {
-	if [[ -e $1 ]]
+	if [ -e $1 ]
 	then
 		auth_option
 	else
@@ -41,7 +41,7 @@ auth_main() {
 # Generate new SSH key and view it
 auth_generatekey() {
 	USER=`whoami`
-	if [[ -e "/home/$USER/.ssh/id_rsa" ]]
+	if [ -e "/home/$USER/.ssh/id_rsa" ]
 	then
 		echo "SSH Key is already exist"
 	else
@@ -58,7 +58,7 @@ auth_generatekey() {
 # View current ssh key
 # If does not exist, create new pair
 auth_key() {
-	if [[ -e "~/.ssh/id_rsa.pub" ]]
+	if [ -e "~/.ssh/id_rsa.pub" ]
 	then
 		echo "SSH Key does not exists"
 		echo "using the below command to create new pair and test it"
