@@ -29,7 +29,7 @@ auth_main() {
 	then
 		auth_option
 	else
-		if [ $1 == "key" ] || [ $1 == "test" ] || [[ $1 == "clear" ]
+		if [ $1 == "key" ] || [ $1 == "test" ] || [ $1 == "clear" ]
 		then
 			auth_$1
 		else
