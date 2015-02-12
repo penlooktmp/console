@@ -41,11 +41,15 @@ setup_main() {
 }
 
 setup_Ubuntu() {
-	sudo python main.py koding
+	if [ -d "/etc/koding" ]
+	then
+		sudo python main.py koding
+	else
+		sudo python main.py ubuntu
+	fi
 }
 
 setup_CentOS() {
-	cd /usr/local/src/penlook/console/setup/
 	sudo python main.py centos
 }
 
