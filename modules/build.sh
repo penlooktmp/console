@@ -28,6 +28,9 @@
 
 build_main() {
 
+	# Free memory before build project
+	sudo sh -c 'echo 1 > /proc/sys/vm/drop_caches'
+
 	USER=`whoami`
 	ROOT="/home/$USER/src/github.com/penlook"
 	if [ -d $ROOT ]
