@@ -84,6 +84,7 @@ clone_module_service() {
 	cd google
 	wget https://github.com/penlook/cayley/archive/master.zip -O cayley.zip
 	unzip cayley.zip
+	rm -rf cayley.zip
 	mv cayley-master cayley
 	cd cayley
 	go get -v ./...
