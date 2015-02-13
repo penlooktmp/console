@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#
 # Penlook Project
 #
 # Copyright (c) 2015 Penlook Development Team
@@ -25,6 +25,7 @@
 # Authors:
 #     Loi Nguyen       <loint@penlook.com>
 #     Viet Nguyen      <vietna@penlook.com>
+
 
 setup_main() {
 
