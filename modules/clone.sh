@@ -82,9 +82,10 @@ clone_module_service() {
 	cd "/home/$USER/src/github.com"
 	mkdir -p google
 	cd google
-	git clone git@github.com:penlook/cayley.git
+	wget https://github.com/penlook/cayley/archive/master.zip -O cayley.zip
+	unzip cayley.zip
+	mv cayley-master cayley
 	cd cayley
-	git checkout master
 	go get -v ./...
 	go build
 	cd $TMP
