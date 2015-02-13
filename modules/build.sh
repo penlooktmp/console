@@ -67,6 +67,7 @@ build_copy_ini() {
 
 	# For Ubuntu
 	[[ -e "/etc/php5/cli/conf.d/90-phalcon.ini" ]] && echo $'extension=phalcon.so \nextension=app.so' > "/etc/php5/cli/conf.d/90-phalcon.ini"
+	[[ -e "/etc/php5/fpm/conf.d/90-phalcon.ini" ]] && echo $'extension=phalcon.so \nextension=app.so' > "/etc/php5/fpm/conf.d/90-phalcon.ini"
 
 }
 
