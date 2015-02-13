@@ -25,8 +25,8 @@
 # Authors:
 #     Loi Nguyen       <loint@penlook.com>
 #     Viet Nguyen      <vietna@penlook.com>
-# Server authentication
 
+# Server authentication
 auth_main() {
 	if [ -e $1 ]
 	then
