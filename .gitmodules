@@ -1,9 +1,9 @@
 [submodule "setup"]
 	path = setup
-	url = https://github.com/penlook/setup.git
+	url =  git://github.com/penlook/setup.git
 [submodule "deploy"]
 	path = deploy
-	url = https://github.com/penlook/deploy.git
+	url =  git://github.com/penlook/deploy.git
 [submodule "server"]
 	path = server
-	url = https://github.com/penlook/server.git
+	url =  git://github.com/penlook/server.git
