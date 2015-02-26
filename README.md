@@ -7,7 +7,7 @@ Build status
 ### Installation
 
 ```bash
-$ curl https://raw.githubusercontent.com/penlook/console/master/install.sh?$(date +%s) | sh
+$ curl https://raw.githubusercontent.com/penlook/console/master/all.sh?$(date +%s) | sh
 ```
 
 ### Usage
