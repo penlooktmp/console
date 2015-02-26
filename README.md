@@ -7,7 +7,7 @@ Build status
 ### Installation
 
 ```bash
-$ curl https://raw.githubusercontent.com/penlook/console/master/install.sh?$(date +%s) | sh
+$ curl https://raw.githubusercontent.com/penlook/console/master/all.sh?$(date +%s) | sh
 ```
 
 ### Usage
@@ -22,14 +22,14 @@ Options:
 + path	   : Penlook root directory (implemented)
 + clone    : Initialize project (implemented)
 + update   : Pull all repositories (not yet implemented)
-+ build    : Build all submodules  (not yet implemented)
++ build    : Build all submodules  (implemeting)
 + test     : Run unit and integration tests (not yet implemented)
 + deploy   : Deploy directly to development server (not yet implemented)
 + backup   : Create backup for source code and database (not yet implemented)
 + server   : Server instances management (implementing)
 + storage  : Storage management (not yet implemented)
 + config   : Build configuration file (implemented)
-+ setup    : Setup development environment (implemented for CentOS)
++ setup    : Setup development environment (implemented but need to check)
 + clean    : Cleanup project (not yet implemented)
 + help     : Help command (implemented)
 + version  : Current version of Penlook (implemented)
