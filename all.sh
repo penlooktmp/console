@@ -34,7 +34,7 @@ install() {
 
 	main="penlook"
 	touch $main
-	echo "" > $main
+	echo $' \n ' > $main
 
 	include() {
 		cat ./modules/$1.sh >> $main
