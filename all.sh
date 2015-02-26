@@ -38,7 +38,6 @@ install() {
 
 	include() {
 		cat ./modules/$1.sh >> $main
-		echo "\n"  >> $main
 	}
 
 	include "util"
