@@ -1,5 +1,2 @@
 language: c
 compiler: gcc
-install:
-    - (chmod +x ./all.sh && ./all.sh)
-    - penlook --help
