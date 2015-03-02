@@ -10,13 +10,24 @@ Build status
 $ curl https://raw.githubusercontent.com/penlook/console/master/all.sh?$(date +%s) | sh
 ```
 
-### Usage
+### Synopsis
 
 ```bash
-$ penlook <option> <parameter>
+$ penlook <subcommand> <parameter>
 ```
 
-Options:
+### Instruction
+
+```bash
+$ penlook auth user@penlook.com
+$ penlook auth test
+$ penlook setup
+$ penlook clone
+$ penlook config
+$ penlook build
+```
+
+### Sub Command
 
 + auth     : Server authentication by ssh key (implemented)
 + path	   : Penlook root directory (implemented)
