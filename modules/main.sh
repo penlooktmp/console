@@ -2,7 +2,7 @@
 # CLI Main
 main() {
 
-	if [[ "$(id -u)" == "0" ]]
+	if [ "$(id -u)" == "0" ]
 	then
 		echo "Can not use penlook cli under root permission !"
 		exit 0
