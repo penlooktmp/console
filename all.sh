@@ -30,6 +30,7 @@
 # Include all modules in one file
 # Set excutable permission for file
 # Copy it to /usr/bin/penlook and ready to run
+
 install() {
 
 	main="penlook"
@@ -40,6 +41,7 @@ install() {
 		cat ./modules/$1.sh >> $main
 	}
 
+	include "header"
 	include "util"
 	include "auth"
 	include "clone"
