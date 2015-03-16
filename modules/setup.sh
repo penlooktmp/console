@@ -2,14 +2,15 @@
 setup_main() {
 
 	cd /usr/local/src/penlook/console/setup
+	sudo chmod +x ./main.sh
 
 	OS=$(tr -s ' \011' '\012' < /etc/issue | head -n 1)
 	case "$OS" in
 	"Ubuntu")
-		setup_$OS
+		setup_$OS $@
 		;;
 	"CentOS")
-		setup_$OS
+		setup_$OS $@
 		;;
 	*) echo "Current operation system is not supported !"
 		;;
@@ -19,25 +20,13 @@ setup_main() {
 setup_Ubuntu() {
 	if [ -d "/etc/koding" ]
 	then
-		python main.py koding
+		./main.sh koding $@
 	else
-		python main.py ubuntu
+		./main.sh ubuntu $@
 	fi
 }
 
 setup_CentOS() {
-	python main.py centos
-}
-
-# Option for authentication
-setup_option() {
-	echo
-	echo "Usage: penlook setup <parameter>"
-	echo "Parameters:"
-    echo
-    echo "  ubuntu  Ubuntu"
-    echo "  centos  Centos"
-    echo "  coreos  CoreOS"
-    echo
+	./main.sh centos $@
 }
 
