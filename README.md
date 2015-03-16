@@ -16,17 +16,6 @@ $ curl https://raw.githubusercontent.com/penlook/console/master/all.sh?$(date +%
 $ penlook <subcommand> <parameter>
 ```
 
-### Instruction
-
-```bash
-$ penlook auth user@penlook.com
-$ penlook auth test
-$ penlook setup
-$ penlook clone
-$ penlook config
-$ penlook build
-```
-
 ### Sub Command
 
 + auth     : Server authentication by ssh key (implemented)
@@ -40,7 +29,7 @@ $ penlook build
 + server   : Server instances management (implementing)
 + storage  : Storage management (not yet implemented)
 + config   : Build configuration file (implemented)
-+ setup    : Setup development environment (implemented but need to check)
++ setup    : Setup development environment (implemented for development)
 + clean    : Cleanup project (not yet implemented)
 + help     : Help command (implemented)
 + version  : Current version of Penlook (implemented)
@@ -107,9 +96,19 @@ $ penlook server list
 $ penlook server ssh < instance_id >
 ```
 
-+ Setup fresh installation for development
++ Setup fresh installation for development server
 ```bash
-$ penlook setup
+$ penlook setup development
+```
+
++ Setup fresh installation for production server (implementing)
+```bash
+$ penlook setup production
+```
+
++ Setup fresh installation for database server (implementing)
+```bash
+$ penlook setup database
 ```
 
 + Run unit and integration test for all sub-project
