@@ -107,14 +107,19 @@ $ penlook server list
 $ penlook server ssh < instance_id >
 ```
 
-+ Setup fresh installation
++ Setup fresh installation for development
 ```bash
 $ penlook setup
 ```
 
-+ Run unit and integration test
++ Run unit and integration test for all sub-project
 ```bash
 $ penlook test
+```
+
++ Run test per repository
+```bash
+$ penlook test <repository name>
 ```
 
 + Help command
