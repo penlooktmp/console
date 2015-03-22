@@ -15,11 +15,11 @@ test_main() {
 
 test(){
 	USER=`whoami`
-	if [ -d /home/$USER/src/github.com/penlook/$1/unit-test.sh ]
+	if [ -f /home/$USER/src/github.com/penlook/$1/unit-test.sh ]
 	then
 		cd  /home/$USER/src/github.com/penlook/$1/
-		chmod +x test.sh
-		./test.sh
+		chmod +x unit-test.sh
+		./unit-test.sh
 	else
 		echo "The configuration for " $1 " has not yet setup"
 	fi
