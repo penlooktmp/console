@@ -23,7 +23,7 @@ $ penlook <subcommand> <parameter>
 + clone    : Initialize project (implemented)
 + update   : Pull all repositories (not yet implemented)
 + build    : Build all submodules  (implemeting)
-+ test     : Run unit and integration tests (not yet implemented)
++ test     : Run unit and integration tests (implemented)
 + deploy   : Deploy directly to development server (not yet implemented)
 + backup   : Create backup for source code and database (not yet implemented)
 + server   : Server instances management (implementing)
