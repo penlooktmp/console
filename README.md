@@ -36,11 +36,6 @@ $ penlook <subcommand> <parameter>
 
 ### Instruction for developers
 
-+ Reference synopsis in console documentation
-```
-https://github.com/penlook/console#synopsis
-```
-
 + Install penlook console
 ```bash
 $ curl https://raw.githubusercontent.com/penlook/console/master/all.sh?$(date +%s) | sh
