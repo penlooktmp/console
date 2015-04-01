@@ -34,6 +34,55 @@ $ penlook <subcommand> <parameter>
 + help     : Help command (implemented)
 + version  : Current version of Penlook (implemented)
 
+### Instruction for developers
+
++ Reference synopsis in console documentation
+```
+https://github.com/penlook/console#synopsis
+```
+
++ Install penlook console
+```bash
+$ curl https://raw.githubusercontent.com/penlook/console/master/all.sh?$(date +%s) | sh
+```
+
++ SSH Authentication with Github
+```bash
+$ penlook auth yourname@penlook.com
+```
+
++ Test authentication successful or failure
+```bash
+$ penlook auth test
+```
+
++ Setup development environment
+```bash
+$ penlook setup development
+```
+
++ Notice: If you are using koding vps, your vps information will have these SSH informations:
+```bash
+IP Address: yourname.koding.io
+Username  : yourname
+Password  : root
+```
+
++ Clone one repository from Github
+```bash
+$ penlook clone service
+```
+
++ Test a repository (implementing)
+```bash
+$ penlook test service
+```
+
++ Build a repository (implementing)
+```bash
+$ penlook build service
+```
+
 ### Documentation
 
 + Create ssh key authentication
